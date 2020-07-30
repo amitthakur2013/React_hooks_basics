@@ -1,7 +1,11 @@
-import React,{ useState } from 'react';
+import React,{ useState,useEffect } from 'react';
 
 function App() {
   const [state,setState]=useState({count:4,theme:'blue'});
+
+  useEffect(() => {
+    console.log('Render')
+  },[])
 
   function decrementCount() {
     setState(prevState => {
@@ -22,5 +26,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
